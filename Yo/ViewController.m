@@ -17,8 +17,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [[FHSTwitterEngine sharedEngine]permanentlySetConsumerKey:@"Xg3ACDprWAH8loEPjMzRg" andSecret:@"9LwYDxw1iTc6D9ebHdrYCZrJP4lJhQv5uf4ueiPHvJ0"];    
-    [[FHSTwitterEngine sharedEngine]permanentlySetConsumerKey:@"zhYrTjnp7IQAcBGTN6r50OWZR" andSecret:@"VPblHDqGjFd5L0ahPWnQNRiYhed5eOjzKleYkKPgRUPX26L3gg"];
+    [[FHSTwitterEngine sharedEngine]permanentlySetConsumerKey:@"Xg3ACDprWAH8loEPjMzRg" andSecret:@"9LwYDxw1iTc6D9ebHdrYCZrJP4lJhQv5uf4ueiPHvJ0"];
+    //するやつーーーー
+//    [[FHSTwitterEngine sharedEngine]permanentlySetConsumerKey:@"zhYrTjnp7IQAcBGTN6r50OWZR" andSecret:@"VPblHDqGjFd5L0ahPWnQNRiYhed5eOjzKleYkKPgRUPX26L3gg"];
     [[FHSTwitterEngine sharedEngine]setDelegate:self];
     [[FHSTwitterEngine sharedEngine]loadAccessToken];
     
@@ -39,7 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    member = [[NSArray alloc] initWithObjects:@"NUMPAD0", @"KIR1CA", @"TEHU", @"AWO1", nil];
+    member = [[NSArray alloc] initWithObjects:@"@numpad0", @"@kir1ca", @"@mystia04", @"@a_w0_1",@"@Skycanvas2000", nil];
     return [member count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -56,7 +57,8 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[FHSTwitterEngine sharedEngine] postTweet:@"Yo"];
+    NSString *yomessage=[NSString stringWithFormat:@"%@ Yo",member[indexPath.row]];
+    [[FHSTwitterEngine sharedEngine] postTweet:yomessage];
     NSLog(@"%d",indexPath.row);
 }
 - (IBAction)OAuth:(id)sender {

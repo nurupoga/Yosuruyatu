@@ -12,6 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[FHSTwitterEngine sharedEngine]permanentlySetConsumerKey:@"<zhYrTjnp7IQAcBGTN6r50OWZR>" andSecret:@"<VPblHDqGjFd5L0ahPWnQNRiYhed5eOjzKleYkKPgRUPX26L3gg>"];
     // Override point for customization after application launch.
     return YES;
 }

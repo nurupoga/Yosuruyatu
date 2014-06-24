@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C795A05319585ACE00086DA8 /* FHSTwitterEngine in Resources */ = {isa = PBXBuildFile; fileRef = C795A05219585ACE00086DA8 /* FHSTwitterEngine */; };
+		C795A05719585D7600086DA8 /* FHSTwitterEngine in Sources */ = {isa = PBXBuildFile; fileRef = C795A05219585ACE00086DA8 /* FHSTwitterEngine */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C795A05919585F8200086DA8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C795A05819585F8200086DA8 /* SystemConfiguration.framework */; };
 		C7D9C0891957E738008FF237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D9C0881957E738008FF237 /* Foundation.framework */; };
 		C7D9C08B1957E738008FF237 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D9C08A1957E738008FF237 /* CoreGraphics.framework */; };
 		C7D9C08D1957E738008FF237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D9C08C1957E738008FF237 /* UIKit.framework */; };
@@ -21,6 +24,8 @@
 		C7D9C0AA1957E738008FF237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D9C08C1957E738008FF237 /* UIKit.framework */; };
 		C7D9C0B21957E738008FF237 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7D9C0B01957E738008FF237 /* InfoPlist.strings */; };
 		C7D9C0B41957E738008FF237 /* YoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D9C0B31957E738008FF237 /* YoTests.m */; };
+		C7D9C0E71957F4D8008FF237 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D9C0E61957F4D8008FF237 /* Accounts.framework */; };
+		C7D9C0E91957F4DD008FF237 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D9C0E81957F4DD008FF237 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C795A05219585ACE00086DA8 /* FHSTwitterEngine */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FHSTwitterEngine; sourceTree = "<group>"; };
+		C795A05819585F8200086DA8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C7D9C0851957E738008FF237 /* Yo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D9C0881957E738008FF237 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7D9C08A1957E738008FF237 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +60,8 @@
 		C7D9C0AF1957E738008FF237 /* YoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YoTests-Info.plist"; sourceTree = "<group>"; };
 		C7D9C0B11957E738008FF237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7D9C0B31957E738008FF237 /* YoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoTests.m; sourceTree = "<group>"; };
+		C7D9C0E61957F4D8008FF237 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		C7D9C0E81957F4DD008FF237 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C795A05919585F8200086DA8 /* SystemConfiguration.framework in Frameworks */,
+				C7D9C0E91957F4DD008FF237 /* Social.framework in Frameworks */,
+				C7D9C0E71957F4D8008FF237 /* Accounts.framework in Frameworks */,
 				C7D9C08B1957E738008FF237 /* CoreGraphics.framework in Frameworks */,
 				C7D9C08D1957E738008FF237 /* UIKit.framework in Frameworks */,
 				C7D9C0891957E738008FF237 /* Foundation.framework in Frameworks */,
@@ -101,6 +113,9 @@
 		C7D9C0871957E738008FF237 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C795A05819585F8200086DA8 /* SystemConfiguration.framework */,
+				C7D9C0E81957F4DD008FF237 /* Social.framework */,
+				C7D9C0E61957F4D8008FF237 /* Accounts.framework */,
 				C7D9C0881957E738008FF237 /* Foundation.framework */,
 				C7D9C08A1957E738008FF237 /* CoreGraphics.framework */,
 				C7D9C08C1957E738008FF237 /* UIKit.framework */,
@@ -118,6 +133,7 @@
 				C7D9C09D1957E738008FF237 /* ViewController.h */,
 				C7D9C09E1957E738008FF237 /* ViewController.m */,
 				C7D9C0A01957E738008FF237 /* Images.xcassets */,
+				C795A05219585ACE00086DA8 /* FHSTwitterEngine */,
 				C7D9C08F1957E738008FF237 /* Supporting Files */,
 			);
 			path = Yo;
@@ -230,6 +246,7 @@
 			files = (
 				C7D9C0A11957E738008FF237 /* Images.xcassets in Resources */,
 				C7D9C0931957E738008FF237 /* InfoPlist.strings in Resources */,
+				C795A05319585ACE00086DA8 /* FHSTwitterEngine in Resources */,
 				C7D9C09C1957E738008FF237 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C795A05719585D7600086DA8 /* FHSTwitterEngine in Sources */,
 				C7D9C09F1957E738008FF237 /* ViewController.m in Sources */,
 				C7D9C0991957E738008FF237 /* AppDelegate.m in Sources */,
 				C7D9C0951957E738008FF237 /* main.m in Sources */,
@@ -456,6 +474,7 @@
 				C7D9C0B91957E738008FF237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7D9C0BA1957E738008FF237 /* Build configuration list for PBXNativeTarget "YoTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +483,7 @@
 				C7D9C0BC1957E738008FF237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

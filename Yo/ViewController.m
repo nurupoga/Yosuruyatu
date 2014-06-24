@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "FHSTwitterEngine/FHSTwitterEngine.h"
+#import "FHSTwitterEngine.h"
 @interface ViewController (){
     NSArray *member;
 }
@@ -17,17 +17,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[FHSTwitterEngine sharedEngine]showOAuthLoginControllerFromViewController:self withCompletion:^(BOOL success) {
-        if (success) {
-            NSLog(@"L0L success");
-        } else {
-            NSLog(@"O noes!!! Logen falyur!!!");
-        }
-    }];
+//    [[FHSTwitterEngine sharedEngine]permanentlySetConsumerKey:@"Xg3ACDprWAH8loEPjMzRg" andSecret:@"9LwYDxw1iTc6D9ebHdrYCZrJP4lJhQv5uf4ueiPHvJ0"];    
+    [[FHSTwitterEngine sharedEngine]permanentlySetConsumerKey:@"zhYrTjnp7IQAcBGTN6r50OWZR" andSecret:@"VPblHDqGjFd5L0ahPWnQNRiYhed5eOjzKleYkKPgRUPX26L3gg"];
+    [[FHSTwitterEngine sharedEngine]setDelegate:self];
+    [[FHSTwitterEngine sharedEngine]loadAccessToken];
+    
     table.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
-
-
+- (void)viewDidAppear:(BOOL)animated
+{
+}
+- (void)loginOAuth {
+    UIViewController *loginController = [[FHSTwitterEngine sharedEngine]loginControllerWithCompletionHandler:^(BOOL success) {
+        NSLog(success?@"L0L success":@"O noes!!! Loggen faylur!!!");
+    }];
+    [self presentViewController:loginController animated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -51,6 +56,10 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [[FHSTwitterEngine sharedEngine] postTweet:@"Yo"];
     NSLog(@"%d",indexPath.row);
+}
+- (IBAction)OAuth:(id)sender {
+    [self loginOAuth];
 }
 @end

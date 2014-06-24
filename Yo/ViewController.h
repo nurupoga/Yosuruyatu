@@ -14,4 +14,5 @@
     IBOutlet UITableView *table;
     NSMutableArray *postsArray;
 }
+- (IBAction)OAuth:(id)sender;
 @end

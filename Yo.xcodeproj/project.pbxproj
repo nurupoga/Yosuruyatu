@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C795A05319585ACE00086DA8 /* FHSTwitterEngine in Resources */ = {isa = PBXBuildFile; fileRef = C795A05219585ACE00086DA8 /* FHSTwitterEngine */; };
-		C795A05719585D7600086DA8 /* FHSTwitterEngine in Sources */ = {isa = PBXBuildFile; fileRef = C795A05219585ACE00086DA8 /* FHSTwitterEngine */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C721881719590F1100234795 /* FHSTwitterEngine.h in Sources */ = {isa = PBXBuildFile; fileRef = C7B671E019590A26007274B5 /* FHSTwitterEngine.h */; };
 		C795A05919585F8200086DA8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C795A05819585F8200086DA8 /* SystemConfiguration.framework */; };
+		C7B671E219590A26007274B5 /* FHSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B671DF19590A26007274B5 /* FHSStream.m */; };
+		C7B671E319590A26007274B5 /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B671E119590A26007274B5 /* FHSTwitterEngine.m */; };
 		C7D9C0891957E738008FF237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D9C0881957E738008FF237 /* Foundation.framework */; };
 		C7D9C08B1957E738008FF237 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D9C08A1957E738008FF237 /* CoreGraphics.framework */; };
 		C7D9C08D1957E738008FF237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D9C08C1957E738008FF237 /* UIKit.framework */; };
@@ -39,8 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C795A05219585ACE00086DA8 /* FHSTwitterEngine */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FHSTwitterEngine; sourceTree = "<group>"; };
 		C795A05819585F8200086DA8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C7B671DE19590A26007274B5 /* FHSStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSStream.h; sourceTree = "<group>"; };
+		C7B671DF19590A26007274B5 /* FHSStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSStream.m; sourceTree = "<group>"; };
+		C7B671E019590A26007274B5 /* FHSTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSTwitterEngine.h; sourceTree = "<group>"; };
+		C7B671E119590A26007274B5 /* FHSTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSTwitterEngine.m; sourceTree = "<group>"; };
 		C7D9C0851957E738008FF237 /* Yo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D9C0881957E738008FF237 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7D9C08A1957E738008FF237 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7B671DD19590A26007274B5 /* FHSTwitterEngine */ = {
+			isa = PBXGroup;
+			children = (
+				C7B671DE19590A26007274B5 /* FHSStream.h */,
+				C7B671DF19590A26007274B5 /* FHSStream.m */,
+				C7B671E019590A26007274B5 /* FHSTwitterEngine.h */,
+				C7B671E119590A26007274B5 /* FHSTwitterEngine.m */,
+			);
+			path = FHSTwitterEngine;
+			sourceTree = "<group>";
+		};
 		C7D9C07C1957E738008FF237 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +148,7 @@
 				C7D9C09D1957E738008FF237 /* ViewController.h */,
 				C7D9C09E1957E738008FF237 /* ViewController.m */,
 				C7D9C0A01957E738008FF237 /* Images.xcassets */,
-				C795A05219585ACE00086DA8 /* FHSTwitterEngine */,
+				C7B671DD19590A26007274B5 /* FHSTwitterEngine */,
 				C7D9C08F1957E738008FF237 /* Supporting Files */,
 			);
 			path = Yo;
@@ -246,7 +261,6 @@
 			files = (
 				C7D9C0A11957E738008FF237 /* Images.xcassets in Resources */,
 				C7D9C0931957E738008FF237 /* InfoPlist.strings in Resources */,
-				C795A05319585ACE00086DA8 /* FHSTwitterEngine in Resources */,
 				C7D9C09C1957E738008FF237 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,10 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C795A05719585D7600086DA8 /* FHSTwitterEngine in Sources */,
+				C721881719590F1100234795 /* FHSTwitterEngine.h in Sources */,
+				C7B671E319590A26007274B5 /* FHSTwitterEngine.m in Sources */,
 				C7D9C09F1957E738008FF237 /* ViewController.m in Sources */,
 				C7D9C0991957E738008FF237 /* AppDelegate.m in Sources */,
 				C7D9C0951957E738008FF237 /* main.m in Sources */,
+				C7B671E219590A26007274B5 /* FHSStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
